@@ -1,0 +1,23 @@
+.mw-input{
+    max-width:700px;
+}
+
+.mw-bt{
+    align-items: center;
+    max-width: 700px;
+}
+
+.mlr-15{
+    margin: 0px 15px;
+}
+
+.container-fluid{
+    max-width: 1200px;
+}
+
+.max-width-table{
+    width: 100%;
+}
+
+/* product details */
+
