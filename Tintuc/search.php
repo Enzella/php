@@ -1,0 +1,64 @@
+<?php
+include "/xampp/htdocs/nhom/DatabaseSQL/db_connectdt.php";
+    ?>
+<?php
+include "/xampp/htdocs/nhom/header/TinTucHeader.php";
+    ?>
+<div class="container" style="padding-top: 100px;">
+    <div class="tintuc" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
+        <div class="tintuc" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
+        <?php
+        if (isset($_POST["s"]) && !empty($_POST["s"])) {
+            $key = $_POST["s"];
+            $sql = "SELECT * FROM tintuc WHERE tieude LIKE '%$key%'";
+        } else {
+            $sql = "SELECT * FROM tintuc";
+        }
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $img = $row['hinhanh'];
+                ?>
+                        <!-- <div class="column">
+                            <div class="form">
+                                <div class="blog-id">Mã: <?php echo $row['matt']; ?></div>
+                                <div class="blog-name">Tiêu đề: <?php echo $row['tieude']; ?></div>
+                                <div class="blog-info">Nộidung ngắn: <?php echo $row['ndngan']; ?></div>
+                                <div class="blog-info">Nội dung: <?php echo $row['noidung']; ?></div>
+                                
+                                <div class="blog-info">Tác giả: <?php echo $row['tacgia']; ?></div>
+                                <div class="blog-info">
+                                    <a href="TinTuc_detail.php?matt=<?php echo $row['matt']; ?>">Xem chi tiết</a>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                        <!-- <div class="blog-image">
+                                    <img src="<?= $img ?>" alt="" class="blog__img">
+                                </div> -->
+                        <div class="elementor-element elementor-element-a6bdbf6 e-flex e-con-boxed e-con" data-id="a6bdbf6" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"><div class="e-con-inner"><div class="elementor-element elementor-element-221904c elementor-widget elementor-widget-heading" data-id="221904c" data-element_type="widget" data-widget_type="heading.default"><div class="elementor-widget-container"></div></div><div class="elementor-element elementor-element-eecec4d elementor-grid-1 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-id="eecec4d" data-element_type="widget" data-settings="{&quot;template_id&quot;:&quot;224273&quot;,&quot;columns&quot;:1,&quot;pagination_type&quot;:&quot;load_more_on_click&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;enabled_visibility&quot;:&quot;yes&quot;,&quot;_skin&quot;:&quot;post&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\&quot;loop-item\&quot;]&quot;,&quot;load_more_spinner&quot;:{&quot;value&quot;:&quot;fas fa-spinner&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;dce_visibility_selected&quot;:&quot;yes&quot;}" data-widget_type="loop-grid.post"><div class="elementor-widget-container"><div class="elementor-loop-container elementor-grid"><style id="loop-224273">.elementor-224273 .elementor-element.elementor-element-18373967{--display:flex;--flex-direction:row;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--align-items:center;--gap:12px;--background-transition:0.3s;--margin-top:0px;--margin-right:0px;--margin-bottom:0px;--margin-left:0px;--padding-top:0px;--padding-right:0px;--padding-bottom:0px;--padding-left:0px;}.elementor-224273 .elementor-element.elementor-element-7c73e6a1 img{width:273px;height:147px;border-radius:20px 20px 20px 20px;}.elementor-224273 .elementor-element.elementor-element-7c73e6a1 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-224273 .elementor-element.elementor-element-7c73e6a1.elementor-element{--flex-grow:1;--flex-shrink:0;}.elementor-224273 .elementor-element.elementor-element-ec6334f{--display:flex;--gap:12px;--background-transition:0.3s;--padding-top:0px;--padding-right:0px;--padding-bottom:0px;--padding-left:0px;}.elementor-224273 .elementor-element.elementor-element-ec6334f.e-con{--align-self:flex-start;}.elementor-224273 .elementor-element.elementor-element-2f0e1a00 .elementor-repeater-item-7bc658b .elementor-icon-list-icon{width:30px;}.elementor-224273 .elementor-element.elementor-element-2f0e1a00 .elementor-icon-list-icon{width:22px;}.elementor-224273 .elementor-element.elementor-element-2f0e1a00 .elementor-icon-list-icon i{font-size:22px;}.elementor-224273 .elementor-element.elementor-element-2f0e1a00 .elementor-icon-list-icon svg{--e-icon-list-icon-size:22px;}.elementor-224273 .elementor-element.elementor-element-2f0e1a00 .elementor-icon-list-text, .elementor-224273 .elementor-element.elementor-element-2f0e1a00 .elementor-icon-list-text a{color:#2E2E2E;}.elementor-224273 .elementor-element.elementor-element-2f0e1a00 .elementor-icon-list-item{font-family:"Open Sans", Sans-serif;font-size:15px;font-weight:700;}.elementor-224273 .elementor-element.elementor-element-42e7aa4c .elementor-heading-title{color:var( --e-global-color-text );font-family:"Open Sans", Sans-serif;font-size:20px;font-weight:700;}.elementor-224273 .elementor-element.elementor-element-43e12177 .elementor-widget-container{color:var( --e-global-color-text );font-family:"Open Sans", Sans-serif;font-size:15px;font-weight:400;line-height:1em;}.elementor-224273 .elementor-element.elementor-element-83239d7 .elementor-icon-list-icon{width:0px;}.elementor-224273 .elementor-element.elementor-element-83239d7 .elementor-icon-list-icon i{font-size:0px;}.elementor-224273 .elementor-element.elementor-element-83239d7 .elementor-icon-list-icon svg{--e-icon-list-icon-size:0px;}.elementor-224273 .elementor-element.elementor-element-83239d7 .elementor-icon-list-item{font-family:"Open Sans", Sans-serif;font-size:15px;font-weight:700;}@media(max-width:767px){.elementor-224273 .elementor-element.elementor-element-42e7aa4c .elementor-heading-title{line-height:1.3em;}}</style><div data-elementor-type="loop-item" data-elementor-id="224273" class="elementor elementor-224273 e-loop-item e-loop-item-277852 post-277852 post type-post status-publish format-standard has-post-thumbnail hentry category-iphone category-thu-thuat" data-elementor-post-type="elementor_library" data-custom-edit-handle="1"><div class="elementor-element elementor-element-18373967 e-con-full e-flex e-con" data-id="18373967" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}"><div class="elementor-element elementor-element-7c73e6a1 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="7c73e6a1" data-element_type="widget" data-widget_type="theme-post-featured-image.default"><div class="elementor-widget-container">
+                        <a href="TinTuc_detail.php?matt=<?php echo $row['matt']; ?>">
+                        <picture><source srcset="<?= $img ?> 1200w, /Content/web/img<?php echo $row['hinhanh']; ?> 300w, /Content/web/img<?php echo $row['hinhanh']; ?> 1024w, /Content/web/img<?php echo $row['hinhanh']; ?> 768w" sizes="(max-width: 1200px) 100vw, 1200px" type="image/webp"><img data-lazyloaded="1" src="<?= $img ?>" decoding="async" width="1200" height="628" data-src="<?= $img ?>" class="attachment-full size-full wp-image-279740 webpexpress-processed" alt="" data-srcset="<?= $img ?> 1200w, <?= $img ?> 300w, <?= $img ?> 1024w, <?= $img ?> 768w" data-sizes="(max-width: 1200px) 100vw, 1200px"><noscript><img decoding="async" width="1200" height="628" src="<?= $img ?>" class="attachment-full size-full wp-image-279740 webpexpress-processed" alt="" srcset="<?= $img ?> 1200w, <?= $img ?> 300w, <?= $img ?> 1024w, <?= $img ?> 768w" sizes="(max-width: 1200px) 100vw, 1200px"></noscript></picture>								</a></div></div><div class="elementor-element elementor-element-ec6334f e-flex e-con-boxed e-con" data-id="ec6334f" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}"><div class="e-con-inner"><div class="elementor-element elementor-element-2f0e1a00 elementor-widget elementor-widget-post-info" data-id="2f0e1a00" data-element_type="widget" data-widget_type="post-info.default"><div class="elementor-widget-container"><ul class="elementor-inline-items elementor-icon-list-items elementor-post-info"><li class="elementor-icon-list-item elementor-repeater-item-7bc658b elementor-inline-item" itemprop="author">
+                        <a href="TinTuc_detail.php?matt=<?php echo $row['matt']; ?>">
+                        <span class="elementor-icon-list-icon">
+                        <img data-lazyloaded="1" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDk2IDk2Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2ZkNGRiIi8+PC9zdmc+" width="96" height="96" decoding="async" class="elementor-avatar" data-src="https://hoanghamobile.com/tin-tuc/wp-content/litespeed/avatar/0e7975e2174b86be067583c9c2cbd276.jpg?ver=1698510838" alt="Le Thu" loading="lazy"><noscript><img width="96" height="96" decoding="async" class="elementor-avatar" src="https://hoanghamobile.com/tin-tuc/wp-content/litespeed/avatar/0e7975e2174b86be067583c9c2cbd276.jpg?ver=1698510838" alt="Le Thu" loading="lazy"></noscript>
+                        </span>
+                        <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-author">
+                        Tác giả: <?php echo $row['tacgia']; ?></span>
+                        </a></li></ul></div></div><div class="elementor-element elementor-element-42e7aa4c elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="42e7aa4c" data-element_type="widget" data-widget_type="theme-post-title.default"><div class="elementor-widget-container"><h3 class="elementor-heading-title elementor-size-default"><a href="TinTuc_detail.php?matt=<?php echo $row['matt']; ?>"><?php echo $row['tieude']; ?></a></h3></div></div><div class="elementor-element elementor-element-43e12177 elementor-widget elementor-widget-theme-post-excerpt" data-id="43e12177" data-element_type="widget" data-widget_type="theme-post-excerpt.default"><div class="elementor-widget-container"><p><?php echo $row['ndngan']; ?></div></div><div class="elementor-element elementor-element-83239d7 elementor-widget elementor-widget-post-info" data-id="83239d7" data-element_type="widget" data-widget_type="post-info.default"><div class="elementor-widget-container"><ul class="elementor-inline-items elementor-icon-list-items elementor-post-info"><li class="elementor-icon-list-item elementor-repeater-item-55f7752 elementor-inline-item" itemprop="about">
+                        <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-terms">
+                        <span class="elementor-post-info__terms-list">
+                        <a href="TinTuc_detail.php?matt=<?php echo $row['matt']; ?>" class="elementor-post-info__terms-list-item">iphone</a>, <a hhref="TinTuc_detail.php?matt=<?php echo $row['matt']; ?>" class="elementor-post-info__terms-list-item">Thủ thuật</a>				</span>
+                        </span></li></ul></div></div></div></div></div></div><div data-elementor-type="loop-item" data-elementor-id="224273" class="elementor elementor-224273 e-loop-item e-loop-item-279676 post-279676 post type-post status-publish format-standard has-post-thumbnail hentry category-thu-thuat category-thu-thuat-may-tinh" data-elementor-post-type="elementor_library" data-custom-edit-handle="1">
+        <?php } ?>
+        <a href="TinTuc.php">quay lại trang tin tức</a>
+        <?php
+include "/xampp/htdocs/nhom/footer/TinTucFooter.php";
+    ?>
+
+    </div>
+</div>
+<script>
+init();
+</script>
