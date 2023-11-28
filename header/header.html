@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/header/header.css">
+    <link rel="import" href="/header/footer.html">
+    <title>Document</title>
+</head>
+
+
+    <header>
+        <div class="top-navigation">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Bản mobile</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Sản phẩm đ&#227; xem</a></li>
+                    <li><a href="#">Trung t&#226;m bảo h&#224;nh</a></li>
+                    <li><a href="#">Hệ thống 127 si&#234;u thị</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Tra cứu đơn h&#224;ng</a></li>
+                    <li><a id="login-modal" href="#">Đăng nhập</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- logo and search box -->
+        <div class="heading">
+            <div class="container">
+                <div class="logo">
+                    <a href="#" title="C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;">
+                        <img src="/logo/logo-hoanghamobile.png"
+                            alt="C&#212;NG TY CỔ PHẦN X&#194;Y DỰNG V&#192; ĐẦU TƯ THƯƠNG MẠI HO&#192;NG H&#192;">
+                    </a>
+                </div>
+
+                <div class="search-box">
+                    <form method="get" action="#" onsubmit="return submitSearch(this);"
+                        enctype="application/x-www-form-urlencoded">
+                        <div class="border">
+                            <input type="text" id="kwd" name="kwd" placeholder="Hôm nay bạn cần tìm gì?" />
+                            <button type="submit" class="search"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-tools">
+                    <div class="item check-order">
+                        <a id="btnCheckOrder" href="#">
+                            <span class="icon">
+                                <i class="bi bi-truck"></i>
+                            </span>
+                            <span class="text">Kiểm tra đơn hàng</span>
+                        </a>
+                    </div>
+                    <div class="item cart">
+                        <a href="#"><i class="bi bi-cart3"></i><label>
+                                <i class="bi bi-caret-left-fill"></i>
+                                <span id="cart-total">0</span></label></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- nav -->
+        <nav>
+            <div class="container">
+                <ul class="root">
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                        <div class="sub-container">
+                            <div class="sub">
+                                <div class="menu g1">
+                                    <h4><a href="#">H&#227;ng sản xuất</a></h4>
+                                    <ul class="display-coslumn format_3">
+                                        <li><a href="#">Apple</a></li>
+                                        <li><a href="#">Samsung</a></li>
+                                        <li><a href="#">Xiaomi</a></li>
+                                        <li><a href="#">OPPO</a></li>
+                                        <li><a href="#">TECNO</a></li>
+                                        <li><a href="#">Nokia</a></li>
+                                        <li><a href="#">realme</a></li>
+                                        <li><a href="#">Vivo</a></li>
+                                        <li><a href="#">HONOR</a></li>
+                                        <li><a href="#">HTC</a></li>
+                                        <li><a href="#">Infinix</a></li>
+                                        <li><a href="#">ROG</a></li>
+                                        <li><a href="#">Nubia</a></li>
+                                        <li><a href="#">XOR</a></li>
+                                        <li><a href="#">Masstel</a></li>
+                                        <li><a href="#">TCL</a></li>
+                                        <li><a href="#">Itel</a></li>
+                                        <li><a href="#">Mới - tin đồn</a></li>
+                                    </ul>
+
+                                    <h4><a href="">Điện thoại cao cấp</a></h4>
+                                    <ul class="display-row format_1">
+                                    </ul>
+
+                                    <h4><a href="">Điện Thoại Gập</a></h4>
+                                    <ul class="display-row format_1">
+                                    </ul>
+                                    
+                                </div>
+                                <div class="menu g2">
+                                    <h4><a href="">Mức gi&#225;</a></h4>
+                                    <ul class="display-row format_2">
+                                        <li><a href="">Tr&#234;n
+                                                100 triệu</a></li>
+                                        <li><a href="">Dưới
+                                                1 triệu</a></li>
+                                        <li><a href="">Từ
+                                                2 đến 3 triệu</a></li>
+                                        <li><a href="">Từ
+                                                3 đến 4 triệu</a></li>
+                                        <li><a href="">Từ
+                                                6 đến 8 triệu</a></li>
+                                        <li><a href="">Từ
+                                                15 đến 20 triệu</a></li>
+                                        <li><a href="">Từ
+                                                20 đến 100 triệu</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu g3">
+                                    <h4><a>Quan t&#226;m nhất</a></h4>
+                                    <ul class="display-row format_2">
+                                        <li><a href="">H&#244;m
+                                                nay</a></li>
+                                        <li><a href="">Tuần
+                                                n&#224;y</a></li>
+                                        <li><a href="">Th&#225;ng
+                                                n&#224;y</a></li>
+                                        <li><a href="">Năm
+                                                nay</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="menu ads" style="width:600px">
+                                    <a href="#" target="_blank"><img  src="img/honor-640x266.jpg"
+                                            alt="X5 pLus" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                    <li id="dien-thoai-di-dong">
+                        <a href="#" target="_self">
+                            <img src="/logo/icon-android.svg" alt="" class="icon-phone" style="width: 26px;">
+                            <span>Điện thoại</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- nav -->
+
+
+    </header>

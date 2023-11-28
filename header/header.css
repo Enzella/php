@@ -1,0 +1,369 @@
+*{
+    color: #fff;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    min-width: 1200px;
+}
+
+header {
+    width: 100%;
+}
+
+header .top-navigation {
+    width: 100%;
+    display: inline-flex;
+    background: #00483d;
+    padding: 6px 0;
+}
+
+.container {
+    min-width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .top-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 10px 0 0;
+    float: right;
+}
+
+header .top-navigation li,
+header .top-navigation li a,
+header .top-navigation li a:link,
+header .top-navigation li a:visited {
+    color: #fff;
+}
+
+header .top-navigation li {
+    float: left;
+    margin-left: 15px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #00483d;
+}
+
+/* <!-- logo and search box --> */
+header .heading .container {
+    padding: 20px 0;
+    display: flex;
+}
+
+header .heading .logo {
+    width: 256px;
+    padding-right: 10px;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #00483d;
+}
+
+header .heading .search-box {
+    flex-basis: 100%;
+    padding: 2px 0 0 20px;
+    vertical-align: top;
+    position: relative;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+header .heading .search-box .border {
+    background: #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 6px #ccc;
+}
+
+header .heading .search-box input {
+    border: none;
+    outline: none;
+    padding: 7px 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+header .heading .search-box button {
+    box-shadow: 0 4px 6px #ccc;
+    position: absolute;
+    right: 4px;
+    top: -5px;
+    background: #00483d;
+    background-image: linear-gradient(#00917a, #00483d);
+    border: none;
+    border-radius: 17px;
+    width: 42px;
+    height: 42px;
+    outline: none;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.icon-search:before {
+    content: 'U';
+    font-size: 50px;
+}
+
+.bi-search::before {
+    padding-top: 5px;
+    padding-left: 4px;
+    font-size: 25px;
+}
+
+i {
+    font-style: italic;
+}
+
+header .heading .order-tools {
+    display: flex;
+    width: 220px;
+    vertical-align: top;
+    padding-left: 25px;
+}
+
+header .heading .order-tools div.item {
+    float: left;
+}
+
+header .heading .order-tools .check-order {
+    margin-right: 25px;
+}
+
+header .heading .order-tools .check-order a {
+    display: block;
+    background: #00483e;
+    border-radius: 10px;
+    padding: 6px 8px;
+    box-shadow: 0 4px 6px #ccc;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    width: 110px;
+    position: relative;
+}
+
+header .heading .order-tools .check-order .icon {
+    font-size: 30px;
+    position: absolute;
+    left: 8px;
+}
+
+header .heading .order-tools .check-order .text {
+    text-align: left;
+    display: block;
+    margin-left: 40px;
+}
+
+header .heading .order-tools .cart a,
+header .heading .order-tools .cart a:link,
+header .heading .order-tools .cart a:visited {
+    font-size: 38px;
+    color: #00483e;
+    display: flex;
+}
+
+header .heading .order-tools .cart a:hover {
+    color: #009981;
+}
+
+header .heading .order-tools .cart a label {
+    display: flex;
+    justify-items: right;
+    justify-content: right;
+}
+
+header .heading .order-tools .cart a label i {
+    color: #ff6801;
+    font-size: 15px;
+    margin: 15px -5px 0px 5px;
+}
+
+header .heading .order-tools .cart a label span {
+    text-align: center;
+    background: #ff6801;
+    margin-top: 11px;
+    margin-left: -1px;
+    font-size: 12px;
+    display: block;
+    flex-basis: 100%;
+    border-radius: 4px;
+    width: 12px;
+    height: 12px;
+    padding: 6px;
+    color: #fff;
+    line-height: 12px;
+}
+
+/* nav */
+.container {
+    min-width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header nav ul.root {
+    position: relative;
+    background-color: #00483d;
+    box-shadow: 0 4px 6px #ccc;
+    border-radius: 5px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 1200px;
+    width: 1200px;
+    height: 63px;
+}
+
+header nav ul.root li {
+    margin: 8px 14px 4px 14px;
+    display: inline-flex;
+}
+
+header nav ul.root li a span {
+    display: block;
+    text-transform: uppercase;
+    font-style: 10px;
+    white-space: nowrap;
+    color: #fff;
+}
+
+header nav .sub-container {
+    background-color: #fff;
+    position: absolute;
+    left: 0px;
+    top: 55px;
+    z-index: 199;
+    margin-top: 15px;
+    /* display: none; */
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    max-width: 1200px;
+    width: 1200px;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+li{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+header nav .container .sub-container .sub {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+header nav .container .sub-container .sub .g1 h4 a{
+    text-align: center;
+}
+header nav .container .sub-container .sub .g1 h4{
+    float: left;
+}
+header nav .container .sub-container .sub .g1 {
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.g1 {
+    width: 20%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.g2 {
+    width: 10%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.g3 {
+    width: 10%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.ads {
+    flex: 1;
+    height: auto;
+}
+
+.display-coslumn {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav .container .sub-container .sub .g1 ul li{
+    display: inline-flex;
+    width: 33.33%;
+    margin: 0px;
+    padding-bottom: 5px;
+}
+header nav .container .sub-container .sub .g2 ul li{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+header nav .container .sub-container .sub .g3 ul li{
+    margin: 0;
+    padding: 0;
+}
+header nav .container .sub-container .sub .g2 h4{
+    float: left;
+}
+header nav .container .sub-container .sub .g3 h4{
+    float: left;
+
+}
+header nav .sub .display-row {
+    flex-direction: column;
+}
+
+.display-row{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
